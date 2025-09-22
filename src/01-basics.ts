@@ -21,6 +21,11 @@ console.log(friends[1]);
 
 //--------------------
 
+interface ColleagueHistory {
+    current: Colleague[],
+    former: Colleague[]
+}
+
 interface Colleague {
     name:string;
     department:string;
@@ -57,9 +62,10 @@ const colleague1 = {
     },
   };
 
-  const colleagues = {
+  export const colleagues : ColleagueHistory = {
     current: [colleague1, colleague2, colleague3],
     former: [],
   };
+  
 
   console.log(colleagues.current[0]);
